@@ -11,19 +11,20 @@ namespace Welcome_CSharp
 
         public Cat() : base("<cat>", "Cat") { }
 
-        public override void Info()
+        public override void Speak()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{Name} meows lazily.");
         }
 
         public override void Play()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{Name} chases after the laser!");
         }
 
-        public override void Speak()
+        public override void Info()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"\tName: {Name}");
+            Console.WriteLine($"\tSpecies: {Species}");
         }
     }
 }

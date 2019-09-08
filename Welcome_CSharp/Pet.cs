@@ -22,18 +22,18 @@ namespace Welcome_CSharp
 
         public virtual void Speak()
         {
-            Console.WriteLine($"{name} says <sound>!");
+            Console.WriteLine($"{name} makes a sound!");
         }
 
         public virtual void Play()
         {
-            Console.WriteLine($"{name} plays with the <object>!");
+            Console.WriteLine($"{name} plays with the object!");
         }
 
         public virtual void Info()
         {
-            Console.WriteLine($"Name: {name}");
-            Console.WriteLine($"Species: {species}");
+            Console.WriteLine($"\tName: {name}");
+            Console.WriteLine($"\tSpecies: {species}");
         }
     }
 }

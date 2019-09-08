@@ -11,19 +11,20 @@ namespace Welcome_CSharp
 
         public Dog() : base("<dog>", "Dog") { }
 
-        public override void Info()
+        public override void Speak()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{Name} barks happily!");
         }
 
         public override void Play()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{Name} fetches the ball!");
         }
 
-        public override void Speak()
+        public override void Info()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"\tName: {Name}");
+            Console.WriteLine($"\tSpecies: {Species}");
         }
     }
 }
