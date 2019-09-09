@@ -11,11 +11,7 @@ namespace Welcome_CSharp
         private string name = "<name>";
         private string species = "<species>";
 
-        public Pet(string n, string s)
-        {
-            name = n;
-            species = s;
-        }
+        public Pet() { }
 
         public string Name { get; set; }
         public string Species { get; set; }
@@ -35,5 +31,10 @@ namespace Welcome_CSharp
             Console.WriteLine($"\tName: {name}");
             Console.WriteLine($"\tSpecies: {species}");
         }
+
+        public virtual void SpeedUp() { return; }
+        public virtual void SpeedDown() { return; }
+        public virtual void Turbo() { return; }
+        public virtual void Slug() { return; }
     }
 }

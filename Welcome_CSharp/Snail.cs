@@ -10,8 +10,10 @@ namespace Welcome_CSharp
     {
         private double speed;
 
-        public Snail() : base("<snail>", "Snail")
+        public Snail()
         {
+            Name = "<snail>";
+            Species = "Snail";
             speed = 1.0;
         }
 
@@ -84,28 +86,28 @@ namespace Welcome_CSharp
             }
         }
 
-        public void SpeedUp()
+        public override void SpeedUp()
         {
             speed += .5;
-            Console.WriteLine($"\t{Name}'s new speed is {speed}.");
+            Console.WriteLine($"{Name}'s new speed is {speed}.");
         }
 
-        public void SpeedDown()
+        public override void SpeedDown()
         {
             speed -= .5;
-            Console.WriteLine($"\t{Name}'s new speed is {speed}.");
+            Console.WriteLine($"{Name}'s new speed is {speed}.");
         }
 
-        public void Turbo()
+        public override void Turbo()
         {
             speed *= 2;
-            Console.WriteLine($"\t{Name}'s new speed is {speed}.");
+            Console.WriteLine($"{Name}'s new speed is {speed}.");
         }
 
-        public void Slug()
+        public override void Slug()
         {
             speed /= 2;
-            Console.WriteLine($"\t{Name}'s new speed is {speed}.");
+            Console.WriteLine($"{Name}'s new speed is {speed}.");
         }
     }
 }

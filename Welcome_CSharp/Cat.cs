@@ -9,7 +9,11 @@ namespace Welcome_CSharp
     public class Cat : Pet
     {
 
-        public Cat() : base("<cat>", "Cat") { }
+        public Cat()
+        {
+            Name = "<cat>";
+            Species = "Cat";
+        }
 
         public override void Speak()
         {
