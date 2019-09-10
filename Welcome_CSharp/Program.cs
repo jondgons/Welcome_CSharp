@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Name: Cody Gonsowski
+ * Date: 9/10/2019
+ * File: Program.cs
+ * Desc: The main driver of the program, used to create menus for users to select through.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -81,7 +88,7 @@ namespace Welcome_CSharp
                                     petCount++;
                                     break;
 
-                                case 0:
+                                case 0: // quit
                                     Console.WriteLine("Maybe next time?");
                                     break;
 
@@ -156,7 +163,6 @@ namespace Welcome_CSharp
                             {
                                 pets[userChoice_pet - 1].Info();
                                 
-                                //TODO: fix this
                                 if (pets[userChoice_pet - 1].Species == "Snail") // for handling snails
                                 {
                                     userChoice_snail = -1; // to reset variable
@@ -180,34 +186,34 @@ namespace Welcome_CSharp
 
                                         switch (userChoice_snail)
                                         {
-                                            case 1:
+                                            case 1: // speed up
                                                 pets[userChoice_pet - 1].SpeedUp();
                                                 break;
 
-                                            case 2:
+                                            case 2: // speed down
                                                 pets[userChoice_pet - 1].SpeedDown();
                                                 break;
 
-                                            case 3:
+                                            case 3: // turbo
                                                 pets[userChoice_pet - 1].Turbo();
                                                 break;
 
-                                            case 4:
+                                            case 4: // slug
                                                 pets[userChoice_pet - 1].Slug();
                                                 break;
 
-                                            case 0:
+                                            case 0: // quit
                                                 Console.WriteLine("No speed?");
                                                 break;
 
-                                            default:
+                                            default: // invalid choice
                                                 Console.WriteLine("Invalid option.");
                                                 break;
                                         }
                                     }
                                 }
                             }
-                            else if (userChoice_pet != 0)
+                            else if (userChoice_pet != 0) // invalid choice
                             {
                                 Console.WriteLine("Invalid option.");
                             }
@@ -252,6 +258,13 @@ namespace Welcome_CSharp
                 Console.Write("\n\t0 - Quit" +
                       "\n+--x--x--x--x--x--x--x--x--x--x--+\n");
             }
+            /*
+             * Desc:
+             *   Local function to print menu of pets.
+             *   
+             * Result:
+             *   Menu containing upwards of nine pets is printed to console.
+             */
         }
     }
 }
